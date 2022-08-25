@@ -1,0 +1,8 @@
+project: PROJECT
+target: FuzzDec
+cmds:
+- cmd: /out/jazzer_driver --agent_path=/out/jazzer_agent_deploy.jar --cp=/out/cbor.jar::.:/out --target_class=FuzzDec --jvm_args="-Xmx2048m"
+  env:
+    LD_LIBRARY_PATH: '"/usr/lib/jvm/java-15-openjdk-amd64/lib/server":/out'
+  timeout: 50
+  libfuzzer: true
