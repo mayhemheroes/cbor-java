@@ -1,0 +1,6 @@
+project: cbor-java
+target: FuzzDec
+cmds:
+  - cmd: /mayhem/FuzzDec
+    libfuzzer: true
+    timeout: 50
